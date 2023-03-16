@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./build/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/app.js" defer></script>
+    <title>Tip calculator app</title>
+  </head>
+  <body class="flex items-end justify-end sm:items-center sm:justify-center">
+    <main>
+      <div>
+        <h1
+          class="my-6 text-center text-2xl font-bold tracking-[.2em] text-color-darkCyan lg:text-xl"
+        >
+          <span class="block">SPLI</span>
+          <span class="block">TTER</span>
+        </h1>
+        <div class="">
+          <div
+            class="flex w-full flex-col justify-center rounded-tr-3xl rounded-tl-3xl bg-color-white p-6 sm:rounded-2xl lg:flex-row lg:gap-x-8 lg:shadow-xl"
+          >
+            <!--################## ROW ASPECT: container at the left -->
+            <div class="mb-6 lg:mb-0 lg:w-[17rem]">
+              <div class="relative mb-6">
+                <label class="mb-1 block font-mono">Bill</label>
+                <p
+                  class="error-message error-message--bill absolute top-0 right-0 font-bold text-[#B07B5E]"
+                ></p>
+                <!-----######## BILL INPUT ----->
+                <input
+                  class="bill-input mb-1 w-full rounded-[5px] border-2 border-transparent bg-color-veryLightGrayCyan py-1 px-2 text-right text-xl font-bold text-color-darkCyan outline-none outline-0 placeholder:text-right focus-within:border-[var(--Strong-cyan)] lg:mb-0"
+                  type="text"
+                  placeholder="0"
+                />
+                <img
+                  class="absolute bottom-4 left-2 lg:bottom-3"
+                  src="./build/assets/icon-dollar.svg"
+                  alt=""
+                />
+              </div>
+
+              <label class="mb-2 block font-mono">Select Tip %</label>
+              <!-----######## CONTAINER FOR BUTTONS ----->
+              <div
+                class="mb-1 flex flex-wrap gap-3.5 text-lg font-bold text-color-white lg:mb-0 lg:flex-1 lg:gap-2"
+              >
+                <button
+                  class="btn fivePerbtn w-[48%] rounded-[5px] bg-color-darkCyan py-2 hover:bg-color-lightCyan lg:w-[5.3rem] lg:py-1"
+                >
+                  5%
+                </button>
+                <button
+                  class="btn tenPerbtn w-[48%] rounded-[5px] bg-color-darkCyan py-2 hover:bg-color-lightCyan lg:w-[5.3rem] lg:py-1"
+                >
+                  10%
+                </button>
+                <button
+                  class="btn fifteenPerbtn w-[48%] rounded-[5px] bg-color-darkCyan py-2 hover:bg-color-lightCyan lg:w-[5.3rem] lg:py-1"
+                >
+                  15%
+                </button>
+                <button
+                  class="btn twentyFivePerbtn w-[48%] rounded-[5px] bg-color-darkCyan py-2 hover:bg-color-lightCyan lg:w-[5.3rem] lg:py-1"
+                >
+                  25%
+                </button>
+                <button
+                  class="btn fiftyPerbtn w-[48%] rounded-[5px] bg-color-darkCyan py-2 hover:bg-color-lightCyan lg:w-[5.3rem] lg:py-1"
+                >
+                  50%
+                </button>
+                <!-----######## INPUT FOR CUSTOM TIP ----->
+                <input
+                  class="w-[48%] rounded-md border-2 border-transparent bg-color-veryLightGrayCyan py-2 px-2 text-center text-lg font-semibold text-color-darkCyan outline-none outline-0 placeholder:text-center placeholder:text-xl placeholder:font-extrabold placeholder:text-color-darkGrayishCyan focus-within:border-[var(--Strong-cyan)] lg:w-[5.3rem] lg:py-1 lg:text-right lg:font-bold lg:placeholder:text-sm"
+                  type="text"
+                  placeholder="Custom"
+                />
+              </div>
+              <div class="mb-6"></div>
+              <div class="relative">
+                <label class="mb-1 block font-mono">Number of People</label>
+                <p
+                  class="error-message error-message--num absolute top-0 right-0 font-bold text-[#B07B5E]"
+                ></p>
+                <!-----######## INPUT FOR NUMBER OF PEOPLE ----->
+                <input
+                  class="peoplesInput user-input mb-1 w-full rounded-[5px] border-2 border-transparent bg-color-veryLightGrayCyan py-1 px-2 text-right text-xl font-bold text-color-darkCyan outline-none outline-0 placeholder:text-right focus-within:border-[var(--Strong-cyan)] lg:mb-0"
+                  type="text"
+                  placeholder="0"
+                />
+                <img
+                  class="absolute bottom-4 left-2 lg:bottom-3"
+                  src="./build/assets/icon-person.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--################# ROW ASPECT: container at the right -->
+            <div
+              class="flex min-h-full w-full flex-col justify-between rounded-xl bg-color-darkCyan p-6 lg:w-[18rem]"
+            >
+              <div>
+                <div class="mb-6 flex items-center justify-between">
+                  <p class="text-xs font-semibold">
+                    <span class="text-color-white">Tip Amount</span>
+                    <span class="block text-color-grayishCyan">/ person</span>
+                  </p>
+                  <p class="text-3xl font-bold text-color-StrongCyan">
+                    $<span class="tip-amount">0.00</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="text-xs font-semibold">
+                    <span class="text-color-white">Total</span>
+                    <span class="block text-color-grayishCyan">/ person</span>
+                  </p>
+                  <p class="text-3xl font-bold text-color-StrongCyan">
+                    $<span class="bill-total">0.00</span>
+                  </p>
+                </div>
+              </div>
+              <button
+                class="btn-reset mt-6 w-full cursor-not-allowed rounded-[5px] bg-[#256765] p-2 font-bold text-[#1D5B59] lg:mt-0 lg:p-1"
+              >
+                RESET
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a
+        class="font-bold"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend 1 Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
