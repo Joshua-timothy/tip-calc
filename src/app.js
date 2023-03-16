@@ -70,21 +70,27 @@ const showErrNDisplayBill = function (tip, tipPercentage) {
   // Checking for format error
   if (billInput.value === "") {
     errBillInputEl.textContent = "can't be blank";
-    billInput.style.border = "2px #B07B5E solid";
+    billInput.classList.add("error-border");
+    billInput.classList.remove("focus-within:border-[var(--Strong-cyan)]");
   } else if (!Number(billInput.value)) {
     errBillInputEl.textContent = "Numbers only";
-    billInput.style.border = "2px #B07B5E solid";
+    billInput.classList.add("error-border");
+    billInput.classList.remove("focus-within:border-[var(--Strong-cyan)]");
   } else if (!Number(numberOfPeopleInput.value) && numberOfPeopleInput.value) {
     errNumInputEl.textContent = "Numbers only";
-    numberOfPeopleInput.style.border = "2px #B07B5E solid";
-  } else if (numberOfPeopleInput.value === 0) {
-    errNumInputEl.textContent = "Can't be zero";
-    numberOfPeopleInput.style.border = "2px #B07B5E solid";
+    numberOfPeopleInput.classList.add("error-border");
+    numberOfPeopleInput.classList.remove(
+      "focus-within:border-[var(--Strong-cyan)]"
+    );
   } else {
     errBillInputEl.textContent = "";
-    billInput.style.border = "2px transparent solid";
+    billInput.classList.remove("error-border");
+    billInput.classList.add("focus-within:border-[var(--Strong-cyan)]");
     errNumInputEl.textContent = "";
-    numberOfPeopleInput.style.border = "2px transparent solid";
+    numberOfPeopleInput.classList.remove("error-border");
+    numberOfPeopleInput.classList.add(
+      "focus-within:border-[var(--Strong-cyan)]"
+    );
   }
 
   // Display tip if format is correct

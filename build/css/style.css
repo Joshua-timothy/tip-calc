@@ -825,6 +825,10 @@ label {
   background-color: hsl(172, 67%, 45%);
 }
 
+.error-border {
+  border: 2px #b07b5e solid;
+}
+
 :root {
   /* ### Primary */
   --Strong-cyan: hsl(172, 67%, 45%);
