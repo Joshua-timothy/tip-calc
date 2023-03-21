@@ -13,13 +13,13 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 <br/>
 
-### **[Live Site](DevJhozi.github.io/tip-calc)**   🔗
+### **[Live Site](joshua-timothy.github.io/tip-calc)**   🔗
 
 <br>
 
 ## Author 👨‍💻
 
-- **Joshua Timothy** - **[Linkedin](https://linkedin.com/in/rammcodes)**, **[Twitter](https://twitter.com/rammcodes)**, **[Github](https://github.com/rammcodes)**
+- **Joshua Timothy** - **[Linkedin](https://linkedin.com/in/joshua-timothy)**, **[Twitter](https://twitter.com/jhozikay)**, **[Github](https://github.com/joshua-timothy)**
 
 
 <br>
