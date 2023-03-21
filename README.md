@@ -13,7 +13,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 <br/>
 
-### **[Live Site](joshua-timothy.github.io/tip-calc)**   🔗
+### **[Live Site](https://joshua-timothy.github.io/tip-calc/)**   🔗
 
 <br>
 
