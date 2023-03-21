@@ -625,8 +625,12 @@ label {
   width: 100%;
 }
 
-.w-\[48\%\] {
-  width: 48%;
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-\[46\%\] {
+  width: 46%;
 }
 
 .cursor-not-allowed {
@@ -823,10 +827,6 @@ label {
 
 .btn.active {
   background-color: hsl(172, 67%, 45%);
-}
-
-.error-border {
-  border: 2px #b07b5e solid;
 }
 
 :root {
